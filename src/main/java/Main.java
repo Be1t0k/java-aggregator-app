@@ -18,9 +18,13 @@ public class Main {
 //        driver.get("https://passport.yandex.ru/auth");
         System.setProperty("webdriver.edge.driver", "D:\\vlsu_works\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
-        driver.get("https://www.selenium.dev/documentation/webdriver/elements/finders/");
-        WebElement lister =  driver.findElement(By.id("m-documentationgrid-li"));
-        lister.click();
+        driver.get("https://www.uralairlines.ru/");
+        WebElement button1 =  driver.findElement(By.className("search-form__btn"));
+        button1.click();
+        WebElement input1 =  driver.findElement(By.className("search-form__input"));
+        input1.click();
+        input1.sendKeys("Возврат билета");
+        button1.click();
         
     }
 }
