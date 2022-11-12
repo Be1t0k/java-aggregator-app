@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.edge.driver", "D:\\vlsu_works\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "./src/main/resources/msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.uralairlines.ru/");
         WebElement button1 =  driver.findElement(By.className("search-form__btn"));
