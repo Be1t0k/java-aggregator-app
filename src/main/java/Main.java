@@ -11,11 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class Main {
 
     public static void main(String[] args) {
-//        WebDriver driver = new ChromeDriver();
-//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        driver.get("https://passport.yandex.ru/auth");
+
         System.setProperty("webdriver.edge.driver", "D:\\vlsu_works\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.uralairlines.ru/");
@@ -25,6 +21,5 @@ public class Main {
         input1.click();
         input1.sendKeys("Возврат билета");
         button1.click();
-        
     }
 }
