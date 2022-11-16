@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="my-parser-java" />
         <module name="parser-java-app" />
+        <module name="untitled" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

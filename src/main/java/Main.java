@@ -23,7 +23,7 @@ public class Main {
         // ввод названия игры
         input1.click();
         Scanner in = new Scanner(System.in);
-        String search_res = in.nextLine();
+        String search_res = in.nextLine().toLowerCase();
         input1.sendKeys(search_res);
         button1.click();
         // выбор первой из списка результатов
@@ -31,7 +31,7 @@ public class Main {
         WebElement game_item_text = driver.findElement(By.xpath("//div[@class='col search_name ellipsis']/span"));
         game_item_text.getText();
         //Проверка на совпадение
-        Boolean compare_res = search_res.equals(game_item_text.getText());
+        boolean compare_res = search_res.equals(game_item_text.getText().toLowerCase());
         if (compare_res){
             game_item.click();
             //Вывод заголовка
