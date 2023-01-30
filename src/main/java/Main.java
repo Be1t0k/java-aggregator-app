@@ -41,7 +41,7 @@ public class Main {
             System.out.println(game_descrip.getText());
         }
         else{
-            System.out.println("Не пройдена");
+            driver.get("https://store.epicgames.com/ru/");
         }
 
     }
