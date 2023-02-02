@@ -56,7 +56,8 @@ public class Main {
     public static void main(String[] args) {
         System.setProperty("webdriver.edge.driver", "./src/main/resources/msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
+        WebDriver webDriver = new EdgeDriver();
         GOG(driver);
-        Steam(driver);
+        Steam(webDriver);
     }
 }
