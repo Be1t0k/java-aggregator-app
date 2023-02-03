@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
@@ -21,7 +22,6 @@ public class Main {
         System.setProperty("webdriver.edge.driver", "./src/main/resources/msedgedriver.exe");
         EdgeOptions options = new EdgeOptions();
         options.setHeadless(true);
-        options.addArguments("--headless");
         options.addArguments("start-maximized");
         WebDriver driver = new EdgeDriver(options);
         WebDriver webDriver = new EdgeDriver(options);

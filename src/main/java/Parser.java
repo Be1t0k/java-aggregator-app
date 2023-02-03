@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.Scanner;
 
@@ -10,10 +11,13 @@ public class Parser {
         webDriver.get("https://store.steampowered.com/");
         WebElement button1 =  webDriver.findElement(By.xpath("//a[@id='store_search_link']/img"));
         WebElement input1 =  webDriver.findElement(By.id("store_nav_search_term"));
+        Actions actions = new Actions(webDriver);
+        actions.moveToElement(input1).click().build().perform();
+        WebElement input2 =  webDriver.findElement(By.id("store_nav_search_term"));
         // ввод названия игры
-        input1.click();
+        input2.click();
         String search_res = in.nextLine().toLowerCase();
-        input1.sendKeys(search_res);
+        input2.sendKeys(search_res);
         button1.click();
         // выбор первой из списка результатов
         WebElement game_item = webDriver.findElement(By.className("responsive_search_name_combined"));
